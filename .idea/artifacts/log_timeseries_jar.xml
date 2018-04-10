@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="log-timeseries:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/log_timeseries_jar</output-path>
+    <root id="archive" name="log-timeseries.jar">
+      <element id="module-output" name="log-timeseries" />
+    </root>
+  </artifact>
+</component>
