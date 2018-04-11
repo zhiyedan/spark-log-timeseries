@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # export  YARN_CONF_DIR=/opt/cloudera/parcels/CDH/lib/spark
 spark-submit \
 --master yarn \
