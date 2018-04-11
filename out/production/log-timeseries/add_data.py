@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# hdfs 复制数据，只是名字改变
 import os
 for month in (2,3):
 	for day in range(1,32):
