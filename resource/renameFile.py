@@ -1,4 +1,5 @@
 #!/bin/python
+# coding=utf-8
 # 将spark跑出的离散文件重新命名
 import os
 
@@ -15,7 +16,7 @@ def mvFun(folderName,outFolder):
 
 if __name__ == '__main__':
     folderName = "/home/zhiyedan/wisetone/make-data/"
-    outFolder = "/home/zhiyedan/wisetone/new-data/"
+    outFolder = "/home/zhiyedan/wisetone/fake-data/"
     if not os.path.exists(outFolder):
         os.makedirs(outFolder)
     mvFun(folderName,outFolder)

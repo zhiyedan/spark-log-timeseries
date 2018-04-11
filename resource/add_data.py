@@ -1,7 +1,7 @@
 #!/usr/bin/python
+#coding=utf-8
 # hdfs 复制数据，只是名字改变
 import os
-
 
 def geneFileName():
     names = []
@@ -15,7 +15,13 @@ def geneFileName():
             else:
                 fileName = fileName + str(month) + str(day) + '_merge.ok'
             names.append(fileName)
-            return names
+    return names
                 # cmd = 'hdfs dfs -cp netLog2016_ZhongXinTong_20180131_merge.ok '+fileName
                 # print(cmd)
                 # os.system(cmd)
+if __name__ == '__main__':
+    fileName = '/home/zhiyedan/wisetone/fileNames.txt'
+    names = geneFileName()
+    with open(fileName,'w') as file:
+        for name in names:
+            file.write(name+'\t')
