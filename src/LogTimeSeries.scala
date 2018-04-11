@@ -6,10 +6,10 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object LogTimeSeries {
   def main(args: Array[String]): Unit = {
-    val inFile = args(0)
-    val outFile = args(1)
-    val minute = args(2)
-    val conf = new SparkConf().setAppName("awifi-log-1minute")
+    val inFile = "D:\\netLog2016_ZhongXinTong_20180310_merge.ok"
+    val outFile = "D:\\netResult"
+    val minute = 1
+    val conf = new SparkConf().setAppName("awifi-log-1minute").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val inputRdd = sc.textFile(inFile)
         .filter( x => x.contains("783233"))
