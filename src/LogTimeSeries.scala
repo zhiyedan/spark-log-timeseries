@@ -8,12 +8,15 @@ import org.apache.spark.{SparkConf, SparkContext}
   */
 object LogTimeSeries {
   def main(args: Array[String]): Unit = {
-    val inFile = "/home/zhiyedan/wisetone/netLog2016_ZhongXinTong_20180310_merge.ok"
-    val outFile = "/home/zhiyedan/wisetone/resultDir"
+//    val inFile = "/home/zhiyedan/wisetone/netLog2016_ZhongXinTong_20180310_merge.ok"
+//    val outFile = "/home/zhiyedan/wisetone/resultDir"
+//    val minute = 1
+    val inFile = args(0)
+    val outFile = args(1)
+    val minute:Int = args(2).toInt
 
-    val minute = 1
     val now:Long = new Date().getTime / 1000
-    val startTime:Long = 1520611200
+    val startTime:Long = 1514736000
 
     val conf = new SparkConf().setAppName("log").setMaster("local[*]")
     val sc = new SparkContext(conf)
